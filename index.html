@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3C Solution — Trusted Cutting Room Solutions | Bangladesh RMG Industry</title>
+<meta name="description" content="Professional sales, service, spare parts & automation solutions for the Bangladesh RMG industry. 25+ years of technical experience. OROX • RECOMA • ANSAL.">
+
+<!-- Bootstrap 5 + Icons + Font -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* ============ 3C SOLUTION BRAND SYSTEM ============ */
+:root{
+  --blue:#0072bc;
+  --blue-d:#005a96;
+  --green:#22a94b;
+  --green-d:#178a3b;
+  --teal:#0097a7;
+  --teal-d:#00788a;
+  --ink:#2e3338;
+  --muted:#68737e;
+  --light:#f5f7fa;
+  --line:#e6eaf0;
+  --dark:#22282d;
+}
+html{scroll-behavior:smooth;scroll-padding-top:92px}
+body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:#fff}
+h1,h2,h3,h4{font-weight:700;color:var(--ink)}
+a{text-decoration:none}
+.section{padding:90px 0}
+.kicker{display:inline-flex;align-items:center;gap:.6rem;font-size:.72rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase}
+.kicker::before{content:"";width:28px;height:2px;background:currentColor}
+.k-blue{color:var(--blue)}.k-green{color:var(--green)}.k-teal{color:var(--teal)}
+.section-title{font-size:clamp(1.7rem,3vw,2.35rem);font-weight:800;margin:.6rem 0 1rem}
+.section-sub{color:var(--muted);max-width:640px}
+
+/* Buttons */
+.btn-brand{background:var(--blue);border:1px solid var(--blue);color:#fff;font-weight:600;padding:.7rem 1.5rem;border-radius:8px}
+.btn-brand:hover{background:var(--blue-d);border-color:var(--blue-d);color:#fff}
+.btn-ghost{background:#fff;border:1px solid #cfd8e0;color:var(--ink);font-weight:600;padding:.7rem 1.5rem;border-radius:8px}
+.btn-ghost:hover{border-color:var(--blue);color:var(--blue)}
+.btn-white{background:#fff;color:var(--blue);font-weight:700;padding:.7rem 1.6rem;border-radius:8px}
+.btn-white:hover{background:#eaf3fb;color:var(--blue-d)}
+
+/* Topbar — logo gradient */
+.topbar{
+  background:linear-gradient(90deg, var(--blue) 0%, var(--green) 50%, var(--teal) 100%);
+  color:#fff;
+  font-size:.82rem;
+  padding:.5rem 0;
+}
+.topbar a{color:#fff}
+.topbar a:hover{color:#eaf6ff;text-decoration:underline}
+.topbar i{color:#fff}
+
+/* Navbar */
+.navbar{background:#fff;border-bottom:1px solid var(--line);padding:.8rem 0}
+.navbar .nav-link{color:#3d454d;font-weight:500;margin:0 .3rem}
+.navbar .nav-link:hover,.navbar .nav-link.active{color:var(--blue)}
+.brand-name{font-family:Georgia,'Times New Roman',serif;font-size:1.5rem;font-weight:700;color:var(--ink);line-height:1.05}
+.brand-tag{font-size:.58rem;letter-spacing:.3em;color:var(--muted);font-weight:600}
+
+/* Hero */
+.hero{background:linear-gradient(180deg,#f8fafc 0%,#eef3f8 100%);padding:95px 0 85px}
+.hero h1{font-size:clamp(2.3rem,4.6vw,3.5rem);font-weight:800;letter-spacing:-.5px}
+.hero .lead{color:var(--muted);font-size:1.08rem}
+.hero-pill{display:inline-flex;align-items:center;gap:.55rem;background:#fff;border:1px solid var(--line);border-radius:999px;padding:.45rem 1rem;font-size:.78rem;font-weight:600;letter-spacing:.06em;color:var(--ink)}
+.dot{width:9px;height:9px;border-radius:50%}
+.hero-img{border-radius:14px;box-shadow:0 24px 60px rgba(15,40,70,.16);width:100%;object-fit:cover}
+.hero-card{position:absolute;left:-14px;bottom:26px;background:#fff;border-radius:12px;box-shadow:0 14px 40px rgba(15,40,70,.14);padding:.9rem 1.2rem;display:flex;gap:.8rem;align-items:center}
+.hero-card .num{font-size:1.6rem;font-weight:800;color:var(--blue)}
+.hero-card small{color:var(--muted);font-weight:600}
+
+/* Tag strip */
+.tag-strip .pill{color:#fff;text-align:center;font-weight:700;letter-spacing:.22em;padding:.7rem 0;font-size:.85rem}
+.tag-strip .p-blue{background:var(--blue)}.tag-strip .p-green{background:var(--green)}.tag-strip .p-teal{background:var(--teal)}
+
+/* Cards */
+.icon-box{width:52px;height:52px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.35rem;flex-shrink:0}
+.t-blue{background:rgba(0,114,188,.1);color:var(--blue)}
+.t-green{background:rgba(34,169,75,.12);color:var(--green)}
+.t-teal{background:rgba(0,151,167,.12);color:var(--teal)}
+.feature-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.7rem;height:100%;transition:box-shadow .25s ease,transform .25s ease}
+.feature-card:hover{box-shadow:0 14px 34px rgba(20,45,75,.09);transform:translateY(-3px)}
+.feature-card h3{font-size:1.05rem;font-weight:700}
+.feature-card p{color:var(--muted);font-size:.92rem;margin:0}
+.check-list li{padding:.35rem 0;color:#454d55}
+.check-list i{color:var(--green)}
+
+/* Stats */
+.stats-band{background:var(--blue);color:#fff;padding:56px 0}
+.stat-num{font-size:2.2rem;font-weight:800}
+.stat-label{font-size:.85rem;letter-spacing:.08em;color:#d8e9f7;text-transform:uppercase;font-weight:600}
+
+/* Brand cards */
+.brand-card{background:#fff;border:1px solid var(--line);border-top:4px solid;border-radius:12px;padding:1.9rem;height:100%}
+.bc-blue{border-top-color:var(--blue)}.bc-green{border-top-color:var(--green)}.bc-teal{border-top-color:var(--teal)}
+.brand-logo{font-family:Georgia,serif;font-weight:800;font-size:1.5rem;letter-spacing:.06em}
+.chip{display:inline-block;font-size:.72rem;font-weight:600;background:var(--light);border:1px solid var(--line);border-radius:999px;padding:.32rem .75rem;color:#4a525a;margin:0 .3rem .4rem 0}
+.supply-item{display:flex;gap:.9rem;align-items:center;background:#fff;border:1px solid var(--line);border-radius:10px;padding:.95rem 1.1rem;height:100%}
+.supply-item span{font-weight:600;font-size:.92rem}
+
+/* Knowledge */
+.k-item{display:flex;gap:1rem;align-items:center;background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.05rem 1.25rem;transition:border-color .2s}
+.k-item:hover{border-color:var(--teal)}
+.k-item h3{font-size:.98rem;margin:0}
+.k-item small{color:var(--muted)}
+.k-item .arr{margin-left:auto;color:var(--teal)}
+
+/* CTA */
+.cta-band{background:linear-gradient(90deg,var(--blue) 0%,var(--teal) 100%);color:#fff;padding:64px 0}
+.cta-band h2{color:#fff}
+
+/* Contact */
+.contact-card{background:var(--light);border:1px solid var(--line);border-radius:12px;padding:1.4rem;height:100%}
+.form-control,.form-select{border-color:var(--line);padding:.65rem .9rem;font-size:.92rem}
+.form-control:focus,.form-select:focus{border-color:var(--blue);box-shadow:0 0 0 .2rem rgba(0,114,188,.12)}
+
+/* Footer */
+.footer{background:var(--dark);color:#a9b2ba;padding:70px 0 0}
+.footer h5{color:#fff;font-size:1rem;font-weight:700;margin-bottom:1.1rem}
+.footer a{color:#a9b2ba;display:inline-block;padding:.18rem 0}
+.footer a:hover{color:#fff}
+.footer-bottom{border-top:1px solid #343c42;margin-top:52px;padding:1.1rem 0;font-size:.83rem}
+.social a{width:36px;height:36px;border:1px solid #3a4249;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;margin-right:.4rem;color:#cfd6db}
+.social a:hover{background:var(--blue);border-color:var(--blue);color:#fff}
+
+/* ============ WHATSAPP FLOATING BUTTON ============ */
+.whatsapp-float{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  z-index:1000;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background:#25D366;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.9rem;
+  box-shadow:0 6px 20px rgba(37,211,102,.45);
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.whatsapp-float:hover{
+  color:#fff;
+  transform:scale(1.08);
+  box-shadow:0 10px 28px rgba(37,211,102,.6);
+}
+.whatsapp-float::before{
+  content:"";
+  position:absolute;
+  inset:-6px;
+  border-radius:50%;
+  border:2px solid rgba(37,211,102,.35);
+  animation:wa-pulse 2s infinite;
+}
+@keyframes wa-pulse{
+  0%{transform:scale(1);opacity:.7}
+  100%{transform:scale(1.35);opacity:0}
+}
+.wa-tooltip{
+  position:absolute;
+  right:72px;
+  background:#fff;
+  color:#2e3338;
+  padding:.45rem .85rem;
+  border-radius:8px;
+  font-size:.82rem;
+  font-weight:600;
+  white-space:nowrap;
+  box-shadow:0 6px 18px rgba(0,0,0,.12);
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .2s;
+}
+.whatsapp-float:hover .wa-tooltip{opacity:1}
+
+@media (max-width: 991px){
+  .hero{padding:60px 0}
+  .hero-card{left:10px}
+  .section{padding:64px 0}
+  .whatsapp-float{width:54px;height:54px;font-size:1.6rem;right:16px;bottom:16px}
+  .wa-tooltip{display:none}
+}
+</style>
+</head>
+
+<body id="home">
+
+<!-- ================= TOPBAR ================= -->
+<div class="topbar d-none d-lg-block">
+  <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+    <div class="d-flex gap-4">
+      <a href="tel:+8801716008477"><i class="bi bi-telephone-fill me-1"></i> +880 1716-008477</a>
+      <a href="mailto:info@3csolution.com"><i class="bi bi-envelope-fill me-1"></i> info@3csolution.com</a>
+      <span><i class="bi bi-geo-alt-fill me-1"></i> Dhaka, Bangladesh</span>
+    </div>
+    <span><i class="bi bi-clock-fill me-1"></i> Sat – Thu : 9:00 AM – 6:00 PM</span>
+  </div>
+</div>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
+      <svg viewBox="0 0 100 96" width="44" height="42" aria-hidden="true">
+        <path d="M37.1 47.3 A20 20 0 1 1 62.9 47.3" stroke="#0072bc" stroke-width="14" fill="none"/>
+        <path d="M51.8 66.8 A20 20 0 1 1 38.2 45.0" stroke="#22a94b" stroke-width="14" fill="none"/>
+        <path d="M61.8 45.0 A20 20 0 1 1 48.2 66.8" stroke="#0097a7" stroke-width="14" fill="none"/>
+      </svg>
+      <span>
+        <span class="brand-name d-block">3C Solution</span>
+        <span class="brand-tag d-block">CAD &bull; CUTTING &bull; AUTOMATION</span>
+      </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#knowledge">Knowledge Center</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-brand btn-sm px-4">Request a Quote</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <span class="hero-pill mb-4">
+          <span class="dot" style="background:var(--blue)"></span>
+          <span class="dot" style="background:var(--green)"></span>
+          <span class="dot" style="background:var(--teal)"></span>
+          Trusted Cutting Room Solutions
+        </span>
+        <h1>Professional Sales, Service, Spare Parts &amp; Automation for the RMG Industry</h1>
+        <p class="lead mt-3 mb-4">Reliable cutting room machinery, genuine spare parts and expert engineering support for garment manufacturers across Bangladesh — backed by 25+ years of technical experience.</p>
+        <div class="d-flex flex-wrap gap-3">
+          <a href="#contact" class="btn btn-brand"><i class="bi bi-send me-2"></i>Request a Quote</a>
+          <a href="tel:+8801716008477" class="btn btn-ghost"><i class="bi bi-telephone me-2"></i>Call Now</a>
+        </div>
+        <div class="d-flex flex-wrap gap-4 mt-4 small fw-semibold text-secondary">
+          <span><i class="bi bi-patch-check-fill me-1" style="color:var(--green)"></i>25+ Years Experience</span>
+          <span><i class="bi bi-patch-check-fill me-1" style="color:var(--green)"></i>Genuine Spare Parts</span>
+          <span><i class="bi bi-patch-check-fill me-1" style="color:var(--green)"></i>Fast Response</span>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="position-relative">
+          <img class="hero-img" src="https://image.qwenlm.ai/public_source/34c8ae93-66e8-4554-9985-de1d776624d9/2519b5574-9878-469e-9a99-cdbabd2051542564.png" alt="Precision fabric cutting in a garment cutting room">
+          <div class="hero-card">
+            <span class="icon-box t-blue"><i class="bi bi-award"></i></span>
+            <span><span class="num d-block lh-1">25+</span><small>Years of Technical Experience</small></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Logo tagline strip -->
+<div class="tag-strip">
+  <div class="container-fluid px-0">
+    <div class="row g-0">
+      <div class="col-4 pill p-blue">CAD</div>
+      <div class="col-4 pill p-green">CUTTING</div>
+      <div class="col-4 pill p-teal">AUTOMATION</div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= WELCOME / ABOUT ================= -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5">
+        <img class="hero-img" src="https://image.qwenlm.ai/public_source/34c8ae93-66e8-4554-9985-de1d776624d9/3519b5574-9878-469e-9a99-cdbabd2051541856.png" alt="Garment production machinery and thread stands">
+      </div>
+      <div class="col-lg-7">
+        <span class="kicker k-blue">Welcome to 3C Solution</span>
+        <h2 class="section-title">A Professional Engineering Partner for Your Cutting Room</h2>
+        <p class="text-secondary">3C Solution is a professional engineering company specializing in cutting room technologies for the garment industry. With over 25 years of technical experience, we provide reliable machinery, spare parts, technical services, automation solutions and engineering support that help manufacturers improve productivity, quality and operational efficiency.</p>
+        <ul class="list-unstyled check-list mt-4">
+          <li class="row"><span class="col-sm-6"><i class="bi bi-check-circle-fill me-2"></i>Reliable Cutting Room Machinery</span><span class="col-sm-6"><i class="bi bi-check-circle-fill me-2"></i>Automation &amp; Engineering Support</span></li>
+          <li class="row"><span class="col-sm-6"><i class="bi bi-check-circle-fill me-2"></i>Genuine Spare Parts Supply</span><span class="col-sm-6"><i class="bi bi-check-circle-fill me-2"></i>Installation &amp; Commissioning</span></li>
+          <li class="row"><span class="col-sm-6"><i class="bi bi-check-circle-fill me-2"></i>Professional Technical Service</span><span class="col-sm-6"><i class="bi bi-check-circle-fill me-2"></i>Preventive Maintenance Programs</span></li>
+        </ul>
+        <a href="#products" class="btn btn-brand mt-4">Explore Our Products</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STATS ================= -->
+<section class="stats-band">
+  <div class="container text-center">
+    <div class="row g-4">
+      <div class="col-6 col-lg-3"><div class="stat-num">25+</div><div class="stat-label">Years Experience</div></div>
+      <div class="col-6 col-lg-3"><div class="stat-num">3</div><div class="stat-label">Trusted Brands</div></div>
+      <div class="col-6 col-lg-3"><div class="stat-num">150+</div><div class="stat-label">Factories Served</div></div>
+      <div class="col-6 col-lg-3"><div class="stat-num">24/7</div><div class="stat-label">Technical Support</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY CHOOSE US ================= -->
+<section class="section" id="why" style="background:var(--light)">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="kicker k-green justify-content-center">Why Choose Us</span>
+      <h2 class="section-title">Why Garment Manufacturers Trust 3C Solution</h2>
+      <p class="section-sub mx-auto">Simple promise — reliable machines, genuine parts and fast, professional support that keeps your cutting room running.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4"><div class="feature-card"><span class="icon-box t-blue mb-3"><i class="bi bi-award"></i></span><h3>25+ Years of Industry Experience</h3><p>Quarter-century of hands-on cutting room expertise across the Bangladesh RMG sector.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="feature-card"><span class="icon-box t-green mb-3"><i class="bi bi-headset"></i></span><h3>Professional Technical Support</h3><p>Trained engineers for installation, troubleshooting, maintenance and operator guidance.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="feature-card"><span class="icon-box t-teal mb-3"><i class="bi bi-gear-wide-connected"></i></span><h3>Genuine Spare Parts</h3><p>Original blades, belts, bearings, knives and consumables — no compromises on quality.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="feature-card"><span class="icon-box t-teal mb-3"><i class="bi bi-lightning-charge"></i></span><h3>Fast Response Time</h3><p>Quick quotation, rapid parts delivery and minimum machine downtime for your factory.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="feature-card"><span class="icon-box t-blue mb-3"><i class="bi bi-people"></i></span><h3>Customer-Focused Service</h3><p>Solutions designed around your production targets, floor space and budget.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="feature-card"><span class="icon-box t-green mb-3"><i class="bi bi-graph-up-arrow"></i></span><h3>Higher Productivity &amp; Efficiency</h3><p>Better cutting accuracy, less fabric wastage and smoother cutting room workflow.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRODUCTS & BRANDS ================= -->
+<section class="section" id="products">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="kicker k-blue justify-content-center">Products &amp; Brands</span>
+      <h2 class="section-title">Machinery From Three Trusted Brands</h2>
+      <p class="section-sub mx-auto">We supply, install and service complete cutting room lines from OROX, RECOMA and ANSAL — matched to your production needs.</p>
+    </div>
+
+    <div class="row g-4 mb-5">
+      <div class="col-lg-4">
+        <div class="brand-card bc-blue">
+          <div class="brand-logo" style="color:var(--blue)">OROX</div>
+          <p class="text-secondary mt-2 mb-3" style="font-size:.93rem">Italian-engineered high-technology fabric cutting machines and spreaders for fashion, clothing and technical textiles — from prototyping to mass production.</p>
+          <span class="chip">Automatic Cutters</span><span class="chip">Spreaders</span><span class="chip">Static Cutting</span>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="brand-card bc-green">
+          <div class="brand-logo" style="color:var(--green)">RECOMA</div>
+          <p class="text-secondary mt-2 mb-3" style="font-size:.93rem">Robust spreading and cutting room equipment engineered for uniform lay height, perfect edge alignment and continuous, reliable production.</p>
+          <span class="chip">Spreading Machines</span><span class="chip">Cutting Tables</span><span class="chip">Fusing</span>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="brand-card bc-teal">
+          <div class="brand-logo" style="color:var(--teal)">ANSAL</div>
+          <p class="text-secondary mt-2 mb-3" style="font-size:.93rem">Proven cutting room machinery with dependable performance and strong spare-part availability for Bangladeshi garment factories.</p>
+          <span class="chip">Cutting Machines</span><span class="chip">Cutting Lines</span><span class="chip">Spare Parts</span>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="h5 fw-bold mb-4 text-center text-uppercase" style="letter-spacing:.12em;color:var(--muted)">What We Supply</h3>
+    <div class="row g-3">
+      <div class="col-md-6 col-lg-4"><div class="supply-item"><span class="icon-box t-blue" style="width:42px;height:42px;font-size:1.1rem"><i class="bi bi-vector-pen"></i></span><span>CAD / CAM Systems &amp; Plotting</span></div></div>
+      <div class="col-md-6 col-lg-4"><div class="supply-item"><span class="icon-box t-green" style="width:42px;height:42px;font-size:1.1rem"><i class="bi bi-scissors"></i></span><span>Automatic Cutting Machines</span></div></div>
+      <div class="col-md-6 col-lg-4"><div class="supply-item"><span class="icon-box t-teal" style="width:42px;height:42px;font-size:1.1rem"><i class="bi bi-layers"></i></span><span>Fabric Spreading Machines</span></div></div>
+      <div class="col-md-6 col-lg-4"><div class="supply-item"><span class="icon-box t-teal" style="width:42px;height:42px;font-size:1.1rem"><i class="bi bi-thermometer-high"></i></span><span>Fusing &amp; Finishing Equipment</span></div></div>
+      <div class="col-md-6 col-lg-4"><div class="supply-item"><span class="icon-box t-blue" style="width:42px;height:42px;font-size:1.1rem"><i class="bi bi-table"></i></span><span>Cutting Tables &amp; Accessories</span></div></div>
+      <div class="col-md-6 col-lg-4"><div class="supply-item"><span class="icon-box t-green" style="width:42px;height:42px;font-size:1.1rem"><i class="bi bi-tools"></i></span><span>Spare Parts &amp; Consumables</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="section" id="services" style="background:var(--light)">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-5">
+        <span class="kicker k-teal">Our Services</span>
+        <h2 class="section-title">Complete Support — From Installation to Automation</h2>
+        <p class="text-secondary">One partner for the full life-cycle of your cutting room equipment: supply, installation, maintenance, parts and upgrades.</p>
+        <img class="hero-img mt-4" src="https://image.qwenlm.ai/public_source/34c8ae93-66e8-4554-9985-de1d776624d9/2519b5574-9878-469e-9a99-cdbabd2051547867.png" alt="Engineer performing electrical maintenance on industrial machinery">
+      </div>
+      <div class="col-lg-7">
+        <div class="row g-4">
+          <div class="col-sm-6"><div class="feature-card"><span class="icon-box t-blue mb-3"><i class="bi bi-cart-check"></i></span><h3>Machinery Sales &amp; Installation</h3><p>Right machine selection, delivery, installation and commissioning with operator training.</p></div></div>
+          <div class="col-sm-6"><div class="feature-card"><span class="icon-box t-green mb-3"><i class="bi bi-wrench-adjustable"></i></span><h3>Service &amp; Maintenance</h3><p>Preventive maintenance contracts, on-call repair and machine health inspections.</p></div></div>
+          <div class="col-sm-6"><div class="feature-card"><span class="icon-box t-teal mb-3"><i class="bi bi-box-seam"></i></span><h3>Genuine Spare Parts</h3><p>Stocked original parts — blades, knives, belts, brushes, sensors and consumables.</p></div></div>
+          <div class="col-sm-6"><div class="feature-card"><span class="icon-box t-blue mb-3"><i class="bi bi-cpu"></i></span><h3>Automation Solutions</h3><p>Cutting room automation, retrofits and upgrades that reduce waste and labour cost.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= KNOWLEDGE CENTER ================= -->
+<section class="section" id="knowledge">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <span class="kicker k-green">Knowledge Center</span>
+        <h2 class="section-title">Practical Guides for Your Cutting Room</h2>
+        <p class="text-secondary">Short, practical engineering guides written from 25+ years of field experience — helping your team get more life and accuracy from every machine.</p>
+        <a href="#contact" class="btn btn-ghost mt-3"><i class="bi bi-question-circle me-2"></i>Ask Our Engineers</a>
+      </div>
+      <div class="col-lg-8">
+        <div class="d-flex flex-column gap-3">
+          <a href="#" class="k-item"><span class="icon-box t-blue"><i class="bi bi-scissors"></i></span><span><h3>How to Increase Cutter Blade Life</h3><small>Sharpening intervals, handling and storage best practices.</small></span><i class="bi bi-arrow-right arr"></i></a>
+          <a href="#" class="k-item"><span class="icon-box t-green"><i class="bi bi-exclamation-triangle"></i></span><span><h3>Common Cutting Machine Problems</h3><small>Quick diagnosis of the issues we see most in factories.</small></span><i class="bi bi-arrow-right arr"></i></a>
+          <a href="#" class="k-item"><span class="icon-box t-teal"><i class="bi bi-clipboard-check"></i></span><span><h3>Preventive Maintenance Guide</h3><small>A simple weekly / monthly checklist for cutting rooms.</small></span><i class="bi bi-arrow-right arr"></i></a>
+          <a href="#" class="k-item"><span class="icon-box t-blue"><i class="bi bi-fan"></i></span><span><h3>Vacuum System Maintenance</h3><p class="mb-0 small text-muted">Keep lay compression stable and cutting accuracy consistent.</p></span><i class="bi bi-arrow-right arr"></i></a>
+          <a href="#" class="k-item"><span class="icon-box t-green"><i class="bi bi-speedometer2"></i></span><span><h3>Cutting Room Productivity Tips</h3><small>Small changes that raise output without extra investment.</small></span><i class="bi bi-arrow-right arr"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta-band">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-8">
+        <h2 class="fw-bold mb-2">Need a reliable partner for your cutting room?</h2>
+        <p class="mb-0 opacity-75">Send us your machine list or problem — our engineers will respond within one working day.</p>
+      </div>
+      <div class="col-lg-4 text-lg-end">
+        <a href="#contact" class="btn btn-white me-2"><i class="bi bi-send me-2"></i>Request a Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="kicker k-blue justify-content-center">Contact Us</span>
+      <h2 class="section-title">Let's Discuss Your Requirement</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="d-flex flex-column gap-3 h-100">
+          <div class="contact-card d-flex gap-3"><span class="icon-box t-blue"><i class="bi bi-geo-alt"></i></span><span><strong>Head Office</strong><br><small class="text-secondary">House 00, Road 00, Tejgaon I/A,<br>Dhaka 1208, Bangladesh</small></span></div>
+          <div class="contact-card d-flex gap-3"><span class="icon-box t-green"><i class="bi bi-telephone"></i></span><span><strong>Phone / WhatsApp</strong><br><small class="text-secondary">
+            <a href="tel:+8801716008477" style="color:inherit">+880 1716-008477</a><br>
+            <a href="https://wa.me/8801716008477" target="_blank" style="color:inherit">WhatsApp Chat</a>
+          </small></span></div>
+          <div class="contact-card d-flex gap-3"><span class="icon-box t-teal"><i class="bi bi-envelope"></i></span><span><strong>Email</strong><br><small class="text-secondary">
+            <a href="mailto:info@3csolution.com" style="color:inherit">info@3csolution.com</a><br>
+            <a href="mailto:service@3csolution.com" style="color:inherit">service@3csolution.com</a>
+          </small></span></div>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <!-- ========== EMAIL INTEGRATION (FormSubmit.co) ========== -->
+        <!-- IMPORTANT: Change "your-email@example.com" to your real email (e.g. info@3csolution.com) -->
+        <form class="border rounded-3 p-4 p-md-4" style="border-color:var(--line)!important"
+              action="https://formsubmit.co/your-email@example.com"
+              method="POST"
+              id="quoteForm">
+          
+          <!-- FormSubmit config (hidden fields) -->
+          <input type="hidden" name="_subject" value="New Quote Request from 3C Solution Website">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://yourdomain.com/?status=success">
+          
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label small fw-semibold">Your Name *</label>
+              <input type="text" name="Full Name" class="form-control" required placeholder="Full name">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small fw-semibold">Company Name</label>
+              <input type="text" name="Company" class="form-control" placeholder="Factory / company">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small fw-semibold">Phone / WhatsApp *</label>
+              <input type="tel" name="Phone" class="form-control" required placeholder="+880">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small fw-semibold">Email *</label>
+              <input type="email" name="Email" class="form-control" required placeholder="you@company.com">
+            </div>
+            <div class="col-12">
+              <label class="form-label small fw-semibold">I am interested in</label>
+              <select name="Interest" class="form-select">
+                <option>Machinery (Cutting / Spreading / CAD)</option>
+                <option>Spare Parts &amp; Consumables</option>
+                <option>Service &amp; Maintenance</option>
+                <option>Automation / Retrofit</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label class="form-label small fw-semibold">Message *</label>
+              <textarea name="Message" class="form-control" rows="4" required placeholder="Tell us about your requirement..."></textarea>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-brand px-5" type="submit"><i class="bi bi-send me-2"></i>Send Request</button>
+            </div>
+          </div>
+        </form>
+        <p class="small text-secondary mt-3 text-center">We'll reply within one working day. Or call <a href="tel:+8801716008477">+880 1716-008477</a> directly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <svg viewBox="0 0 100 96" width="40" height="38" aria-hidden="true">
+            <path d="M37.1 47.3 A20 20 0 1 1 62.9 47.3" stroke="#0072bc" stroke-width="14" fill="none"/>
+            <path d="M51.8 66.8 A20 20 0 1 1 38.2 45.0" stroke="#22a94b" stroke-width="14" fill="none"/>
+            <path d="M61.8 45.0 A20 20 0 1 1 48.2 66.8" stroke="#0097a7" stroke-width="14" fill="none"/>
+          </svg>
+          <span><span class="brand-name d-block" style="color:#fff">3C Solution</span><span class="brand-tag d-block">CAD &bull; CUTTING &bull; AUTOMATION</span></span>
+        </div>
+        <p class="small">Professional engineering company specializing in cutting room technologies for the garment industry — machinery, spare parts, service and automation for the Bangladesh RMG sector.</p>
+        <div class="social mt-3">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="https://wa.me/8801716008477" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h5>Quick Links</h5>
+        <a href="#home">Home</a><br><a href="#about">About Us</a><br><a href="#products">Products</a><br><a href="#services">Services</a><br><a href="#knowledge">Knowledge Center</a><br><a href="#contact">Contact</a>
+      </div>
+      <div class="col-6 col-lg-3">
+        <h5>Products</h5>
+        <a href="#products">OROX Cutting Machines</a><br><a href="#products">RECOMA Spreaders</a><br><a href="#products">ANSAL Cutting Lines</a><br><a href="#products">CAD / CAM Systems</a><br><a href="#products">Spare Parts &amp; Consumables</a>
+      </div>
+      <div class="col-lg-3">
+        <h5>Contact</h5>
+        <p class="small mb-1"><i class="bi bi-geo-alt me-2" style="color:var(--teal)"></i>Tejgaon I/A, Dhaka 1208, Bangladesh</p>
+        <p class="small mb-1"><i class="bi bi-telephone me-2" style="color:var(--teal)"></i>+880 1716-008477</p>
+        <p class="small mb-1"><i class="bi bi-envelope me-2" style="color:var(--teal)"></i>info@3csolution.com</p>
+        <p class="small mb-0"><i class="bi bi-clock me-2" style="color:var(--teal)"></i>Sat – Thu : 9:00 AM – 6:00 PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom d-flex flex-wrap justify-content-between gap-2">
+      <span>© <span id="yr"></span> 3C Solution. All rights reserved.</span>
+      <span>Trusted Cutting Room Solutions — Bangladesh</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== WHATSAPP FLOATING BUTTON ========== -->
+<a href="https://wa.me/8801716008477?text=Hello%203C%20Solution%2C%20I%20need%20information%20about%20your%20cutting%20room%20solutions."
+   class="whatsapp-float"
+   target="_blank"
+   aria-label="Chat on WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+  <span class="wa-tooltip">Chat with us</span>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Success message after redirect back from FormSubmit
+  const url = new URL(window.location.href);
+  if (url.searchParams.get('status') === 'success') {
+    alert('Thank you! Your request has been sent successfully. We will contact you soon.');
+  }
+
+  // Active nav highlight on scroll
+  const links = document.querySelectorAll('.navbar .nav-link');
+  const secs  = [...links].map(l => document.querySelector(l.getAttribute('href'))).filter(Boolean);
+  window.addEventListener('scroll', () => {
+    let cur = secs[0];
+    secs.forEach(s => { if (scrollY >= s.offsetTop - 120) cur = s; });
+    links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + cur.id));
+  });
+</script>
+</body>
+</html>
